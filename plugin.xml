@@ -18,7 +18,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <dependency id="org.apache.cordova.device" url="https://github.com/apache/cordova-plugin-device" />
+    <dependency id="cordova-plugin-device" url="https://github.com/apache/cordova-plugin-device" />
 
     <js-module src="www/local-notification.js" name="LocalNotification">
         <clobbers target="plugin.notification.local" />
@@ -70,7 +70,8 @@
              * The activity calls the background callback and brings the launch inten
              * up to foreground.
             -->
-            <activity android:name="de.appplant.cordova.plugin.localnotification.ReceiverActivity" android:launchMode="singleInstance" />
+						<!-- not compatible or needed with cordova 4. -->
+            <!--<activity android:name="de.appplant.cordova.plugin.localnotification.ReceiverActivity" android:launchMode="singleInstance" />-->
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
